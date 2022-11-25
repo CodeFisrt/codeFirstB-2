@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col-4">
         <label for="">Select City</label>
-        <select class="form-control" (change)="onCityChange($event)">
+        <select class="form-control" [(ngModel)]="selectedCity" >
           <option value="Nagpur">Nagpur</option>
           <option value="Pune">Pune</option>
           <option value="Mumbai">Mumbai</option>
@@ -49,5 +49,23 @@
       </div>
       <div class="col-4"> selected CIty :{{selectedCity}}</div>
     </div>
+  </div>
+  <div class="col-4">
+    <p>course Name : {{courseName}} - {{empName}} -- {{empCity}}</p>
+    <input type="text" [(ngModel)]="courseName"   >
+    <input type="text" [(ngModel)]="empName">
+    <input type="text"  [value]="empCity">
+    <input type="number" [(ngModel)]="rollno">
+    <input type="checkbox" [(ngModel)]="isIndian">
+    <br>
+    <input type="radio" name="gender" [(ngModel)]="gender" value="male" id=""> Male
+    <input type="radio" name="gender" [(ngModel)]="gender" value="female" id=""> Female
+    <br>
+    <select class="form-control" [(ngModel)]="selectedCity" >
+      <option value="Nagpur">Nagpur</option>
+      <option value="Pune">Pune</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Panji">Panji</option>
+    </select>
   </div>
 </div>

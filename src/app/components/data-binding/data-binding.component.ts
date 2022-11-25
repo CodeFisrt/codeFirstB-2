@@ -8,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class DataBindingComponent implements OnInit {
 
   firstName: string = 'Demo';
-
   inputType: string = 'checkbox';
   placeHolderText = 'Enter Name';
   teztBoxId= 'txtMyName';
-  pColor = 'text-primary'
+  pColor = 'text-primary';
+  courseName:string = 'React';
+  empName:string;
+  empCity: string;
+  rollno:number = 123;
+  isIndian: boolean = true;
+  gender: string = 'female';
 
   constructor() {
-    this.selectedCity = '';
+    this.selectedCity = 'Mumbai';
+    this.empCity = 'Nagpur';
+    this.empName = 'Shankar';
   }
 
   ngOnInit(): void {
