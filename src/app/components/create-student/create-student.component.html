@@ -1,0 +1,66 @@
+<h2>Student Create Form</h2>
+<div class="row">
+  <div class="col-8">
+    <div class="row">
+      <div class="col-3">
+        <label for="">Name</label>
+        <input type="text" [(ngModel)]="studentObj.name" class="form-control">
+      </div>
+      <div class="col-3">
+        <label for="">Contact No</label>
+        <input type="text" [(ngModel)]="studentObj.contact" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label for="">City</label>
+        <select [(ngModel)]="studentObj.city" class="form-control">
+          <option value="Mumbai">Mumbai</option>
+           <option value="Nagpur">Nagpur</option>
+           <option value="Delhi">Delhi</option>
+           <option value="Pune">Pune</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <label for="">State</label>
+        <input type="text" [(ngModel)]="studentObj.state" class="form-control">
+      </div>
+      <div class="col-3">
+        <label for="">Country</label>
+        <input type="text" [(ngModel)]="studentObj.country" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+          <label for="">Address</label>
+        <textarea class="form-control" [(ngModel)]="studentObj.address"  rows="2"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label for="">IsIndian</label>
+        <input type="checkbox" [(ngModel)]="studentObj.isIndian" >
+      </div>
+      <div class="col-3">
+        <label for="">Gender</label>
+        <input type="radio" name="gender"  [(ngModel)]="studentObj.gender"value="male"> Male
+        <input type="radio" name="gender" [(ngModel)]="studentObj.gender" value="female"> FeMale
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <button type="button" class="btn btn-danger">Reset</button>
+      </div>
+      <div class="col-4">
+        <button type="button" class="btn btn-success" (click)="onSaveStudent()">Save</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <p>Name: {{studentObj.name}}</p>
+    <p>Contact: {{studentObj.contact}}</p>
+    <p>City: {{studentObj.city}}</p>
+    <p>State: {{studentObj.state}}</p>
+  </div>
+</div>
+

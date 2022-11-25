@@ -21,3 +21,21 @@
       Divide</button>
   </div>
 </div>
+<div class="row">
+  <div class="col-3">
+    <input type="text"  [(ngModel)] ="cityName">
+  </div>
+  <div class="col-2">
+    <button class="btn btn -sm  btn-success" (click)="addCity()">Add City</button>
+  </div>
+  <div class="col-3">
+    {{cityArray}}
+   <ul>
+    <li *ngFor="let item of cityArray">{{item}}</li>
+   </ul>
+  </div>
+</div>
+
+
+
+

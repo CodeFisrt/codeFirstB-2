@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { UserComponent } from './components/user/user.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:'calculator',
     component: CalculatorComponent
+  },
+  {
+    path:'createStudent',
+    component: CreateStudentComponent
   }
 ];
 

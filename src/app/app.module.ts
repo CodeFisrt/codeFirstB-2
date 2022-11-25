@@ -8,13 +8,15 @@ import { UserComponent } from './components/user/user.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
+import { CreateStudentComponent } from './components/create-student/create-student.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     UserComponent,
     DataBindingComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
