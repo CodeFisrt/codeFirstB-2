@@ -9,6 +9,7 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { FormsModule } from '@angular/forms';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
+import { NgifComponent } from './components/ngif/ngif.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { CreateStudentComponent } from './components/create-student/create-stude
     UserComponent,
     DataBindingComponent,
     CalculatorComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    NgifComponent
   ],
   imports: [
     BrowserModule,

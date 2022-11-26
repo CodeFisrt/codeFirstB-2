@@ -4,6 +4,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { NgifComponent } from './components/ngif/ngif.component';
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'createStudent',
     component: CreateStudentComponent
+  },
+  {
+    path:'ng-if',
+    component: NgifComponent
   }
 ];
 
