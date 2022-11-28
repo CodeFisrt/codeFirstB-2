@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-2">
+    <ul >
+      <li *ngFor="let cityName of cityList">{{cityName}}</li>
+    </ul>
+  </div>
+  <div class="col-2">
+    <select>
+      <option *ngFor="let myCity of cityList">{{myCity}}</option>
+    </select>
+  </div>
+  <div class="col-2">
+    <label *ngFor="let item of cityList">{{item}}</label>
+  </div>
+  <div class="col-2">
+    <div *ngFor="let rollNo of rollNoArray">{{rollNo}}</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <table class="table table-bordered">
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Is Indian</th>
+      </tr>
+      <tr *ngFor="let stud of studentArray;let srNo= index">
+        <td>{{srNo+1}}</td>
+        <td>{{stud.name}}</td>
+        <td>{{stud.city}}</td>
+        <td>
+          <span *ngIf="stud.isIndian == true">Yes</span>
+          <span *ngIf="stud.isIndian == false" >No</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-3">
+    <select [(ngModel)]="selectedStudent">
+      <option *ngFor="let item of studentArray" [value]="item.studId">{{item.name}}</option>
+    </select>
+  </div>
+  <div class="col-3">
+    {{selectedStudent}}
+  </div>
+</div>
