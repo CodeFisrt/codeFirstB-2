@@ -4,6 +4,7 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { UserComponent } from './components/user/user.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path:'ng-for',
     component: NgForComponent
+  },
+  {
+    path:'ng-class',
+    component: NgClassComponent
   }
 ];
 

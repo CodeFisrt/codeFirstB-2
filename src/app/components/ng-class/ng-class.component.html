@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-3">
+    <div class="p-4 m-2" [class]="div1Class">
+      div 1 // dynamic class using property binding
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="p-4 m-2" [ngClass]="isIndian ?'bg-success text-white':'bg-danger text-primary'">
+      div 2 // dynamic class using ngclass with condition
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="p-4" [ngClass]="selectedColor">
+      selected Color -{{selectedColor}}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+  </div>
+  <div class="col-3">
+    <button (click)="isIndian = !isIndian">Toggle Indian Value</button>
+  </div>
+  <div class="col-3">
+    <select [(ngModel)]="selectedColor">
+      <option *ngFor="let item of bgColorArray" >{{item}}</option>
+    </select>
+    <input type="tel" [(ngModel)]="selectedColor">
+  </div>
+</div>
+<div class="row">
+  <div class="" [ngClass]="isSidePanelOpen?'col-8':'col-12'">
+    <div class="card">
+      <div class="card-header bg-success">
+        Student List
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Gender</th>
+            <th>Gender</th>
+            <th>Is Indian</th>
+          </tr>
+          <tr *ngFor="let stud of studentArray;index as i">
+            <td>{{i+1}}</td>
+            <td>{{stud.name}}</td>
+            <td>{{stud.city}}</td>
+            <td>
+            <i *ngIf="stud.gender == 'male'" class="fa fa-male" aria-hidden="true"></i>
+              <i *ngIf="stud.gender == 'female'" class="fa fa-female" aria-hidden="true"></i>
+            </td>
+            <td>
+                {{stud.gender == 'male'}}
+              <i class="" [ngClass]="stud.gender == 'male' ? 'fa fa-male' : 'fa fa-female'"></i>
+              </td>
+            <td>
+              <span [ngClass]="stud.isIndian? 'text-success':'text-danger'" *ngIf="stud.isIndian == true">Yes</span>
+              <span [ngClass]="stud.isIndian? 'text-success':'text-danger'" *ngIf="stud.isIndian == false" >No</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-4" *ngIf="isSidePanelOpen">
+    <div class="card">
+      <div class="card-header bg-success">
+        Create Card
+      </div>
+    </div>
+  </div>
+</div>

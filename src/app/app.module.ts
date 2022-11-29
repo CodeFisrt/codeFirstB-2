@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
+import { NgClassComponent } from './components/ng-class/ng-class.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { NgForComponent } from './components/ng-for/ng-for.component';
     CalculatorComponent,
     CreateStudentComponent,
     NgifComponent,
-    NgForComponent
+    NgForComponent,
+    NgClassComponent
   ],
   imports: [
     BrowserModule,

@@ -25,13 +25,13 @@
         <th>City</th>
         <th>Is Indian</th>
       </tr>
-      <tr *ngFor="let stud of studentArray;let srNo= index">
-        <td>{{srNo+1}}</td>
+      <tr *ngFor="let stud of studentArray;index as i">
+        <td>{{i+1}}</td>
         <td>{{stud.name}}</td>
         <td>{{stud.city}}</td>
         <td>
-          <span *ngIf="stud.isIndian == true">Yes</span>
-          <span *ngIf="stud.isIndian == false" >No</span>
+          <span [ngClass]="stud.isIndian? 'text-success':'text-danger'" *ngIf="stud.isIndian == true">Yes</span>
+          <span [ngClass]="stud.isIndian? 'text-success':'text-danger'" *ngIf="stud.isIndian == false" >No</span>
         </td>
       </tr>
     </table>
