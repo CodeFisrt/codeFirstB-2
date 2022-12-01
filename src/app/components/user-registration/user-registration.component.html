@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-2">
+    <label for="">Enter Name</label>
+    <input type="text" [(ngModel)]="user.name" class="form-control">
+  </div>
+  <div class="col-2">
+    <label for="">Enter City</label>
+    <input type="text" [(ngModel)]="user.city" class="form-control">
+  </div>
+  <div class="col-2">
+    <label for="">Enter Contact</label>
+    <input type="text" [(ngModel)]="user.contact" class="form-control">
+  </div>
+  <div class="col-2">
+
+    <input type="checkbox" [(ngModel)]="user.isIndian"><label for="">Is Indian</label>
+  </div>
+  <div class="col-2">
+    <label for="">Select Bg Color</label>
+    <select [(ngModel)]="user.bgColor">
+      <option value=""> Select</option>
+      <option value="bg-primary"> Primary</option>
+      <option value="bg-secondary"> Secondary</option>
+      <option value="bg-success"> success</option>
+    </select>
+  </div>
+  <div class="col-2">
+    <button class="btn btn-sm btn-success" (click)="addUser()">Add</button>
+    <button class="btn btn-sm btn-secondary" (click)="resetForm()">Reset</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <table class="table table-bordered table-hover">
+      <tr>
+        <th>Sr</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Contact</th>
+        <th>Is Indian</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let item of users;let i=index" [ngClass]="item.bgColor">
+        <td>{{i+1}}</td>
+        <td>{{item.name | titlecase | na}}</td>
+        <td>{{item.city | lowercase}}</td>
+        <td>{{item.contact | na}}</td>
+        <td>
+          <span *ngIf="item.isIndian"> Yes</span>
+          <span *ngIf="!item.isIndian"> No</span>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-danger" (click)="removeUser(i)"> Remove</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

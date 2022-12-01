@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <ul>
+      <li>Original Value : {{firstName}} - formated value : {{firstName | uppercase}}</li>
+      <li>Original Value : {{firstName}} - formated value : {{firstName | lowercase}}</li>
+      <li>Original Value : {{firstName}} - formated value : {{firstName | titlecase}}</li>
+      <li>Original Value : {{todaysDate}} - formated value : {{todaysDate | date}}</li>
+      <li>Original Value : {{todaysDate}} - formated value (dd-mm-yy) : {{todaysDate | date:"dd-MM-yy"}}</li>
+      <li>Original Value : {{todaysDate}} - formated value (dd-mm-yy) : {{todaysDate | date:"dd:MMM:yyyy"}}</li>
+      <li>Original Value : {{todaysDate}} - formated value (hh-mm-ss) : {{todaysDate | date:"hh-mm-ss"}}</li>
+      <li>Original Value : {{productPrice}} - formated value  : {{productPrice |number: '1.0-0'}}</li>
+      <li>Original Value : {{productPrice}} - formated value  : {{productPrice | currency:'INR'}}</li>
+      <li>Original Value : {{cityArray}} - formated value  : {{cityArray | slice:0:2}}</li>
+      <li>Original Value : {{studetObject}} - formated value  :  {{studetObject|json}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <table class="table table-bordered">
+      <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Is Indian</th>
+      </tr>
+      <tr *ngFor="let stud of studentArray;index as i">
+        <td>{{i+1}}</td>
+        <td>{{stud.name | na}}</td>
+        <td>{{stud.city | na:'City Not Found'}}</td>
+        <td>
+          {{stud.isIndian | na:'NA'}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -12,6 +12,11 @@ import { CreateStudentComponent } from './components/create-student/create-stude
 import { NgifComponent } from './components/ngif/ngif.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { NaPipe } from './pipes/na.pipe';
+import { MyPipePipe } from './pipes/my-pipe.pipe';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,12 @@ import { NgClassComponent } from './components/ng-class/ng-class.component';
     CreateStudentComponent,
     NgifComponent,
     NgForComponent,
-    NgClassComponent
+    NgClassComponent,
+    NgStyleComponent,
+    PipesComponent,
+    NaPipe,
+    MyPipePipe,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,

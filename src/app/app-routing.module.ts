@@ -6,7 +6,10 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { EmployeeComponent } from './components/employee/employee.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { NgifComponent } from './components/ngif/ngif.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
@@ -41,6 +44,18 @@ const routes: Routes = [
   {
     path:'ng-class',
     component: NgClassComponent
+  },
+  {
+    path:'ng-style',
+    component: NgStyleComponent
+  },
+  {
+    path:'pipe',
+    component: PipesComponent
+  },
+  {
+    path:'users',
+    component: UserRegistrationComponent
   }
 ];
 
