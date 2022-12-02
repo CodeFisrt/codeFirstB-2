@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-3">
+    <label for="">Name</label>
+    <input type="text" class="form-control"   [(ngModel)]="productObj.productName">
+  </div>
+  <div class="col-3">
+    <label for="">Category</label>
+    <select class="form-control" [(ngModel)]="productObj.productCategory">
+      <option value="">Select Category</option>
+      <option value="Laptop">Laptop</option>
+      <option value="Desktop-PC">Desktop-PC</option>
+      <option value="Headphone">Headphone</option>
+      <option value="Mobiles">Mobiles</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-3">
+    <label for="">Price</label>
+    <input type="text" class="form-control" [(ngModel)]="productObj.productPrice">
+  </div>
+  <div class="col-3">
+    <label for="">Discount</label>
+    <input type="text" class="form-control" [(ngModel)]="productObj.discount">
+  </div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <input type="checkbox" [(ngModel)]="productObj.isStockAvailable">
+    <label for="">Is Available</label>
+  </div>
+  <div class="col-3">
+    <label for="">Image Url</label>
+    <input type="text" class="form-control" [(ngModel)]="productObj.productImageUrl">
+  </div>
+  <div class="col-3">
+    <img src="" alt="" >
+  </div>
+</div>
+<div class="row pt-3">
+  <div class="col-3 text-end">
+    <button class="btn btn-success btn-sm">Cancel </button>
+  </div>
+  <div class="col-3 text-center">
+    <button class="btn btn-success btn-sm" (click)="onSaveProduct()">Save Product </button>
+  </div>
+</div>

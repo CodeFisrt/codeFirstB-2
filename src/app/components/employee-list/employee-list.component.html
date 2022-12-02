@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="" [ngClass]="isSidePanelOpen?'col-8':'col-12'">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <div class="row">
+          <div class="col-6 ">
+            Employee List
+          </div>
+          <div class="col-6  text-end">
+              <button class="btn bnt-sm btn-success" (click)="showSidePanel()">Add Employee</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th>Sr </th>
+            <th>Name </th>
+            <th>City </th>
+            <th>Conact </th>
+            <th>Department </th>
+          </tr>
+          <tr *ngFor="let item of employeeArray;let sr= index">
+            <td>{{sr+1}}</td>
+            <td>{{item.empName}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.contact}}</td>
+            <td>{{item.dept}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-4" *ngIf="isSidePanelOpen">
+    <div class="card">
+      <div class="card-header bg-primary">
+        <div class="row">
+          <div class="col-6">
+            Create Employee
+          </div>
+          <div class="col-6 text-end">
+              <button class="btn bnt-sm btn-success" (click)="closeSidePanel()">Close</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <label for="">Name</label>
+            <input type="text" class="form-control"   [(ngModel)]="employeeObject.empName">
+          </div>
+          <div class="col-6">
+            <label for="">Emp Id</label>
+            <input type="text" class="form-control"   [(ngModel)]="employeeObject.empId">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label for="">Department</label>
+            <select class="form-control" [(ngModel)]="employeeObject.dept">
+              <option value="">Select Category</option>
+              <option value="IT">IT</option>
+              <option value="Sales">Sales</option>
+              <option value="Field Work">Field Work</option>
+              <option value="Marketing">Marketing</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+             <label for="">City</label>
+            <input type="text"  class="form-control"[(ngModel)]="employeeObject.city">
+          </div>
+          <div class="col-6">
+            <label for="">Contact</label>
+            <input type="text" class="form-control" [(ngModel)]="employeeObject.contact">
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-6">
+             <label for="">Address</label>
+           <textarea class="form-control" [(ngModel)]="employeeObject.address" rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="row pt-3">
+          <div class="col-6 text-end">
+            <button class="btn btn-success btn-sm" (click)="closeSidePanel()">Cancel </button>
+          </div>
+          <div class="col-6 text-center">
+            <button class="btn btn-success btn-sm" (click)="onSaveEmp()"  >Save Employee </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

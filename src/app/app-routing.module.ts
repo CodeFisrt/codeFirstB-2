@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { CreateProductComponent } from './components/product/create-product/create-product.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { UserComponent } from './components/user/user.component';
 
@@ -56,6 +59,18 @@ const routes: Routes = [
   {
     path:'users',
     component: UserRegistrationComponent
+  },
+  {
+    path:'create-Product',
+    component: CreateProductComponent
+  },
+  {
+    path:'product-List',
+    component: ProductListComponent
+  },
+  {
+    path:'emp-List',
+    component: EmployeeListComponent
   }
 ];
 

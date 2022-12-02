@@ -17,6 +17,9 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { NaPipe } from './pipes/na.pipe';
 import { MyPipePipe } from './pipes/my-pipe.pipe';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
+import { CreateProductComponent } from './components/product/create-product/create-product.component';
+import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,10 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
     PipesComponent,
     NaPipe,
     MyPipePipe,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    CreateProductComponent,
+    ProductListComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
