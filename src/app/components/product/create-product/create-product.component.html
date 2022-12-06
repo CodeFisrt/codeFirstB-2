@@ -1,37 +1,47 @@
+<form #prodyForm="ngForm">
+
+
 <div class="row">
   <div class="col-3">
     <label for="">Name</label>
-    <input type="text" class="form-control"   [(ngModel)]="productObj.productName">
+    <input type="text"  name="name" class="form-control" #prodName="ngModel" required minlength="6"  [(ngModel)]="productObj.productName">
+    <div class="text-danger" *ngIf="prodName.touched">
+      <span *ngIf="prodName.errors?.['required']">This is Required </span>
+      <span *ngIf="prodName.errors?.['minlength']">Min char is 6</span>
+    </div>
   </div>
   <div class="col-3">
     <label for="">Category</label>
-    <select class="form-control" [(ngModel)]="productObj.productCategory">
+    <select class="form-control" name="Category"  required #prodCategory="ngModel" [(ngModel)]="productObj.productCategory">
       <option value="">Select Category</option>
       <option value="Laptop">Laptop</option>
       <option value="Desktop-PC">Desktop-PC</option>
       <option value="Headphone">Headphone</option>
       <option value="Mobiles">Mobiles</option>
     </select>
+    <div class="text-danger" *ngIf="prodCategory.touched">
+      <span *ngIf="prodCategory.errors?.['required']">This is Required</span>
+    </div>
   </div>
 </div>
 <div class="row">
   <div class="col-3">
     <label for="">Price</label>
-    <input type="text" class="form-control" [(ngModel)]="productObj.productPrice">
+    <input type="email" name="price"  class="form-control" required [(ngModel)]="productObj.productPrice">
   </div>
   <div class="col-3">
     <label for="">Discount</label>
-    <input type="text" class="form-control" [(ngModel)]="productObj.discount">
+    <input type="text" name="discount"  class="form-control" [(ngModel)]="productObj.discount">
   </div>
 </div>
 <div class="row">
   <div class="col-2">
-    <input type="checkbox" [(ngModel)]="productObj.isStockAvailable">
+    <input type="checkbox" name="isStockAvailable"   [(ngModel)]="productObj.isStockAvailable">
     <label for="">Is Available</label>
   </div>
   <div class="col-3">
     <label for="">Image Url</label>
-    <input type="text" class="form-control" [(ngModel)]="productObj.productImageUrl">
+    <input type="text" class="form-control" name="productImageUrl"  [(ngModel)]="productObj.productImageUrl">
   </div>
   <div class="col-3">
     <img src="" alt="" >
@@ -42,6 +52,7 @@
     <button class="btn btn-success btn-sm">Cancel </button>
   </div>
   <div class="col-3 text-center">
-    <button class="btn btn-success btn-sm" (click)="onSaveProduct()">Save Product </button>
+    <button class="btn btn-success btn-sm" (click)="onSaveProduct()" [disabled]="!prodyForm.form.valid">Save Product </button>
   </div>
 </div>
+</form>

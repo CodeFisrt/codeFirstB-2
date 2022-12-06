@@ -20,6 +20,7 @@ import { UserRegistrationComponent } from './components/user-registration/user-r
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { TemplateComponent } from './components/template/template.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
     UserRegistrationComponent,
     CreateProductComponent,
     ProductListComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,

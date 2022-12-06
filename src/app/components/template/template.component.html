@@ -1,0 +1,52 @@
+<form #frm="ngForm">
+  <div class="row">
+    <div class="col-3">
+      <label for="">Name</label>
+      <input type="text" name="name" #studname="ngModel" required minlength="3" [(ngModel)]="studentObj.name" class="form-control">
+      <div class="text-danger">
+        <span *ngIf="studname.errors?.['required']"> This is required</span>
+        <span *ngIf="studname.errors?.['minlength']">Min Char is 3 </span>
+      </div>
+    </div>
+    <div class="col-3">
+      <label for="">City</label>
+      <input type="text" name="city" #studcity="ngModel" required minlength="5" [(ngModel)]="studentObj.city"  class="form-control">
+      <div class="text-danger" *ngIf="studcity.touched || studcity.dirty">
+        <span *ngIf="studcity.errors?.['required']">City Is Required</span>
+        <span *ngIf="studcity.errors?.['minlength']">Min Chars is 5</span>
+      </div>
+    </div>
+    <div class="col-3">
+      <label for="">Email</label>
+      <input type="text" name="email" #studemail="ngModel"
+       pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" required  [(ngModel)]="studentObj.email"  class="form-control">
+      <div class="text-danger">
+        <span *ngIf="studemail.errors?.['required']">Email Is Required</span>
+        <span *ngIf="studemail.errors?.['pattern']">Email Id Not Proper</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <label for="">Pan card</label>
+      <input type="text" name="pincode" #studPAnCard="ngModel" required=""
+      pattern="^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$" [(ngModel)]="studentObj.pincode"  class="form-control">
+      <div class="text-danger">
+        <span *ngIf="studPAnCard.errors?.['required']">Pancard Is Required</span>
+        <span *ngIf="studPAnCard.errors?.['pattern']">Pan Card no Not Proper</span>
+      </div>
+    </div>
+    <div class="col-3">
+      <label for="">Address</label>
+      <textarea name="address" id="" [(ngModel)]="studentObj.address"  class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="row pt-3">
+    <div class="col-3 text-center">
+      <button  class="btn btn-sm btn-secondary">Cancel</button>
+    </div>
+    <div class="col-3 text-center">
+      <button  class="btn btn-sm btn-success" [disabled]="!frm.form.valid">Save Student</button>
+    </div>
+  </div>
+</form>

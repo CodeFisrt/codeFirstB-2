@@ -12,6 +12,7 @@ import { NgifComponent } from './components/ngif/ngif.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { TemplateComponent } from './components/template/template.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { UserComponent } from './components/user/user.component';
 
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path:'emp-List',
     component: EmployeeListComponent
+  },
+  {
+    path:'template',
+    component: TemplateComponent
   }
 ];
 
