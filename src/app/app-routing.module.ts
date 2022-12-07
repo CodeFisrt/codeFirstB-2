@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ApiGetComponent } from './components/api-get/api-get.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
@@ -76,6 +77,10 @@ const routes: Routes = [
   {
     path:'template',
     component: TemplateComponent
+  },
+  {
+    path:'get-api',
+    component: ApiGetComponent
   }
 ];
 

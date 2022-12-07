@@ -21,6 +21,8 @@ import { CreateProductComponent } from './components/product/create-product/crea
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { TemplateComponent } from './components/template/template.component';
+import { ApiGetComponent } from './components/api-get/api-get.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +42,14 @@ import { TemplateComponent } from './components/template/template.component';
     CreateProductComponent,
     ProductListComponent,
     EmployeeListComponent,
-    TemplateComponent
+    TemplateComponent,
+    ApiGetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
