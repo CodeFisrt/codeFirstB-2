@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApiGetComponent } from './components/api-get/api-get.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
+import { CourseMasterComponent } from './components/codefirst/course-master/course-master.component';
+import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
@@ -81,6 +83,14 @@ const routes: Routes = [
   {
     path:'get-api',
     component: ApiGetComponent
+  },
+  {
+    path:'Course',
+    component: CourseMasterComponent
+  },
+  {
+    path:'enquiry',
+    component: EnquiryComponent
   }
 ];
 

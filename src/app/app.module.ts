@@ -23,6 +23,8 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { TemplateComponent } from './components/template/template.component';
 import { ApiGetComponent } from './components/api-get/api-get.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CourseMasterComponent } from './components/codefirst/course-master/course-master.component';
+import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import {HttpClientModule} from '@angular/common/http';
     ProductListComponent,
     EmployeeListComponent,
     TemplateComponent,
-    ApiGetComponent
+    ApiGetComponent,
+    CourseMasterComponent,
+    EnquiryComponent
   ],
   imports: [
     BrowserModule,
