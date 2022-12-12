@@ -25,6 +25,7 @@ import { ApiGetComponent } from './components/api-get/api-get.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CourseMasterComponent } from './components/codefirst/course-master/course-master.component';
 import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.component';
+import { CandidateComponent } from './components/codefirst/candidate/candidate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.compone
     TemplateComponent,
     ApiGetComponent,
     CourseMasterComponent,
-    EnquiryComponent
+    EnquiryComponent,
+    CandidateComponent
   ],
   imports: [
     BrowserModule,

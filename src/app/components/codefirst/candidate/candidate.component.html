@@ -1,0 +1,177 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6">Candidate List</div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table  ">
+                    <tr>
+                        <th>Sr </th>
+                        <th>name</th>
+                        <th>contactNo</th>
+                        <th>email</th>
+                        <th>city</th>
+                    </tr>
+                    <tr *ngFor="let item of candidatesArray;let sr= index">
+                        <td>{{sr+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.contactNo}}</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.city}}</td>
+                        <td>
+                            <button class="btn btn-success" (click)="OnEdit(item.candidateId)">Edit</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6"> Candidate Form</div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Name</label>
+                                <input type="text" name="name" [(ngModel)]="candidateObj.name" class="form-control ">
+                                <label for="">Email</label>
+                                <input type="text" name="email" [(ngModel)]="candidateObj.email" class="form-control ">
+                                <label for="">Select Course </label>
+                                <select name="courseId" [(ngModel)]="candidateObj.courseId" class="form-control ng-untouched ng-pristine ng-valid">
+                                    <option value="" selected="">Select Course</option>
+                                    <option value="743">Angular</option>
+                                    <option value="744">React Js</option>
+                                    <option value="746">priya</option>
+                                    <option value="747">pl</option>
+                                    <option value="748">gvjv</option>
+                                    <option value="749">vaibhav</option>
+                                    <option value="750">string</option>
+                                    <option value="751">react</option>
+                                    <option value="752">reactjs</option>
+                                    <option value="753">react1js</option>
+                                    <option value="754">react1js12e2e</option>
+                                    <option value="755">java</option>
+                                    <option value="756">javascript</option>
+                                    <option value="757">javascript2</option>
+                                    <option value="758">be</option>
+                                    <option value="759">java1</option>
+                                    <option value="760">ghhggy</option>
+                                    <option value="761">vvv</option>
+                                    <option value="762">be123</option>
+                                    <option value="763">be1234</option>
+                                    <option value="764">React3</option>
+                                    <option value="765">angular12</option>
+                                    <option value="766">xyz</option>
+                                    <option value="767">Angular JS</option>
+                                    <option value="768">English</option>
+                                    <option value="769">ang</option>
+                                    <option value="770">Angular@123</option>
+                                    <option value="771">react@1234</option>
+                                    <option value="772">java@1111</option>
+                                    <option value="773">js-node</option>
+                                    <option value="774">aaa</option>
+                                    <option value="775">java+js+angular</option>
+                                    <option value="776">JS-Angular&amp;react</option>
+                                    <option value="777">JS+Angular+jira</option>
+                                    <option value="778">1-Angular2-React</option>
+                                    <option value="779">English Grammer</option>
+                                    <option value="780">Suyash</option>
+                                    <option value="781">Akash</option>
+                                    <option value="782">English Speaking</option>
+                                    <option value="783">English -Grammer</option>
+                                    <option value="784">Grammer </option>
+                                    <option value="785">wrw</option>
+                                    <option value="786">angular/js</option>
+                                    <option value="787"> sss</option>
+                                    <option value="788">Angular(priyanka)</option>
+                                    <option value="789">springboot</option>
+                                    <option value="790"> Angular</option>
+                                    <option value="791"> Angularas</option>
+                                    <option value="792">Angular 15</option>
+                                    <option value="793">Angular 16</option>
+                                    <option value="794">Angular 13</option>
+                                    <option value="795">Angular@2</option>
+                                    <option value="796">React Js 3</option>
+                                    <option value="797">.Net</option>
+                                    <option value="798">JS</option>
+                                    <option value="799">sql</option>
+                                    <option value="800">android</option>
+                                    <option value="801">codefirst</option>
+                                    <option value="802"> Physic</option>
+                                    <option value="803">Angular/Html</option>
+                                    <option value="804">ios</option>
+                                    <option value="805">plsql</option>
+                                    <option value="806">html5</option>
+                                    <option value="807">Angular55</option>
+                                    <option value="808">bootstrp</option>
+                                    <option value="809">designing</option>
+                                    <option value="810">DevOps</option>
+                                    <option value="811">java11</option>
+                                    <option value="812">angular Java</option>
+                                    <option value="813">c++</option>
+                                    <option value="814">Angularrrrr</option>
+                                    <option value="815">Adv Java11</option>
+                                    <option value="816">qwe</option>
+                                    <option value="817">qwertyuiop</option>
+                                    <option value="818"> html</option>
+                                    <option value="819">erty</option>
+                                    <option value="820">communication</option>
+                                    <option value="821"> codefirst</option>
+                                    <option value="822">Advanced Javascript</option>
+                                    <option value="823"> c++</option>
+                                    <option value="824"> javaprogrming</option>
+                                    <option value="825">react node</option>
+                                    <option value="826">commu</option>
+                                    <option value="827">angular15</option>
+                                    <option value="828">maths</option>
+                                    <option value="829">m</option>
+                                    <option value="830">fullstack</option>
+                                    <option value="831">mc</option>
+                                    <option value="832">AngularJs</option>
+                                    <option value="833">FullStackDevloper</option>
+                                    <option value="834">abcde</option>
+                                    <option value="835">erp</option>
+                                    <option value="836">Be-mech</option>
+                                    <option value="837">M-tech</option>
+                                    <option value="838">BE-entc</option>
+                                    <option value="839">aws</option>
+                                </select>
+                                <label for="">College Name</label>
+                                <input type="text" name="collegeName" [(ngModel)]="candidateObj.collegeName" class="form-control ">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Contact No</label>
+                                <input type="text" name="contactNo" [(ngModel)]="candidateObj.contactNo" class="form-control ">
+                                <label for="">Password</label>
+                                <input type="password" name="password" [(ngModel)]="candidateObj.password" class="form-control ">
+                                <label for="">Education</label>
+                                <input type="text" name="education" [(ngModel)]="candidateObj.education" class="form-control ">
+                                <label for="">City</label>
+                                <input type="text"  name="city" [(ngModel)]="candidateObj.city" class="form-control ">
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-6 text-center">
+                                    <button class="btn btn-sm btn-secondary">Cancel</button>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <button class="btn btn-sm btn-primary" (click)="updateCandidate()">Update</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
