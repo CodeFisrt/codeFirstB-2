@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6"> Client List</div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-primary">Create </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Clinet </th>
+                            <th>Business</th>
+                            <th>Contact Person</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of clientArray;let sr= index">
+                            <td>{{sr+1}}</td>
+                            <td>{{item.clientName}}</td>
+                            <td>{{item.businessName}}</td>
+                            <td>{{item.contactPerson}}</td>
+                            <td>{{item.email}}</td>
+                            <td>
+                                <button class="btn btn-primary" (click)="onEdit(item)">Edit</button>
+                                <button class="btn btn-danger" (click)="onDelete(item.clientId)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-success">
+                <div class="row">
+                    <div class="col-6"> Create New Client </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-sm btn-primary">Close </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label for=""> Client Name</label>
+                        <input type="text" [(ngModel)]="clientObj.clientName" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for=""> Business Name</label>
+                        <input type="text" [(ngModel)]="clientObj.businessName" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for=""> Contact Person</label>
+                        <input type="text" [(ngModel)]="clientObj.contactPerson" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for=""> Contact No</label>
+                        <input type="text" [(ngModel)]="clientObj.contactNo" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for=""> Alt Contact  </label>
+                        <input type="text" [(ngModel)]="clientObj.altContactNo" class="form-control">
+                    </div>
+                    <div class="col-6">
+                        <label for="">Email</label>
+                        <input type="text" [(ngModel)]="clientObj.email" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="">Logo</label>
+                        <input type="text" [(ngModel)]="clientObj.logo" class="form-control">
+                    </div>
+                </div>
+                <div class="row text-center pt-3">
+                    <div class="col-6 ">
+                        <button class="btn btn-sm btn-secondary">Cancel</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-sm btn-success" *ngIf="clientObj.clientId ==0" (click)="onSaveClient()">Save</button>
+                        <button class="btn btn-sm btn-success" *ngIf="clientObj.clientId !== 0" (click)="onUpdateClient()">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

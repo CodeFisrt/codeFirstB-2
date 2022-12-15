@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ApiGetComponent } from './components/api-get/api-get.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { CandidateComponent } from './components/codefirst/candidate/candidate.component';
+import { ClientComponent } from './components/codefirst/client/client.component';
 import { CourseMasterComponent } from './components/codefirst/course-master/course-master.component';
 import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.component';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
@@ -96,6 +97,10 @@ const routes: Routes = [
   {
     path:'candidate',
     component: CandidateComponent
+  },
+  {
+    path:'client',
+    component: ClientComponent
   }
 ];
 

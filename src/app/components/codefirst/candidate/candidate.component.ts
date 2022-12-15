@@ -32,5 +32,15 @@ export class CandidateComponent implements OnInit {
       this.getAllCandidates();
     })
   }
+  OnDelete(candidate: any) {
+    this.http.post('http://onlinetestapi.gerasim.in/api/OnlineTest/DeleteCandidate',candidate).subscribe((result:any)=> {
+      if(result.result) {
+        alert(result.message);
+        this.getAllCandidates();
+      } else {
+        alert(result.message)
+      }
+    })
+  }
 
 }
