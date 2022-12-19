@@ -27,6 +27,10 @@ import { CourseMasterComponent } from './components/codefirst/course-master/cour
 import { EnquiryComponent } from './components/codefirst/enquiry/enquiry.component';
 import { CandidateComponent } from './components/codefirst/candidate/candidate.component';
 import { ClientComponent } from './components/codefirst/client/client.component';
+import { JsonPlaceHolderComponent } from './components/codefirst/json-place-holder/json-place-holder.component';
+import { DataBindingReviseComponent } from './components/revise/data-binding-revise/data-binding-revise.component';
+import { AlertComponent } from './resuable/alert/alert.component';
+import { ProgressBarComponent } from './resuable/progress-bar/progress-bar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +55,11 @@ import { ClientComponent } from './components/codefirst/client/client.component'
     CourseMasterComponent,
     EnquiryComponent,
     CandidateComponent,
-    ClientComponent
+    ClientComponent,
+    JsonPlaceHolderComponent,
+    DataBindingReviseComponent,
+    AlertComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

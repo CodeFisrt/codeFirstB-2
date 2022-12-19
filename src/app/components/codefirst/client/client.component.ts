@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
 
+  alertText= "Clinet Page loaded Success";
   clientArray: any[] = [];
   clientObj: any = {
     "clientId": 0,

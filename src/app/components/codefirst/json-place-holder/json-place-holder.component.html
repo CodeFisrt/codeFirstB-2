@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-2">
+    <input type="text" [(ngModel)]="usrObj.name">
+  </div>
+  <div class="col-2">
+    <input type="text" [(ngModel)]="usrObj.username">
+  </div>
+  <div class="col-2">
+    <input type="text" [(ngModel)]="usrObj.email">
+  </div>
+  <div class="col-2">
+   <button (click)="onSave()"> Save</button>
+   <button (click)="onUpdate()"> update</button>
+  </div>
+</div>
+<table class="table table-bordered">
+  <tr *ngFor="let item of users">
+    <td>{{item.name}}</td>
+    <td>{{item.username}}</td>
+    <td>{{item.address.city}}</td>
+    <td>{{item.address.geo.lat}}</td>
+    <td>
+      <button (click)="onDelete(item.id)">Delete</button>
+    </td>
+  </tr>
+</table>

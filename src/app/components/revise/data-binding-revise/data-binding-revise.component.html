@@ -1,0 +1,57 @@
+<div class="row text-center">
+  <div class="col-6 bg-success">
+    1 way Data Bidning
+  </div>
+  <div class="col-6 bg-primary">
+    2 way Data Binding
+  </div>
+</div>
+<div class="row text-center">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-4 bg-success" >
+        Interpolation
+      </div>
+      <div class="col-4 bg-success">
+        property Binding
+      </div>
+      <div class="col-4 bg-success">
+        Event Binding
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12 bg-primary">
+        using ng Model
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row text-center">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-4 bg-success" >
+        {{name}}
+      </div>
+      <div class="col-4 bg-success">
+      <input [type]="inputType" >
+      </div>
+      <div class="col-4 bg-success">
+        <button (click)="onClick('hellow')">Click Me</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12 bg-primary">
+        using ng Model
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 bg-primary">
+        <input type="text"  [(ngModel)]="inputType">
+      </div>
+    </div>
+  </div>
+</div>
