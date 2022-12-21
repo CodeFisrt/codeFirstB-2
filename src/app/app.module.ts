@@ -31,6 +31,9 @@ import { JsonPlaceHolderComponent } from './components/codefirst/json-place-hold
 import { DataBindingReviseComponent } from './components/revise/data-binding-revise/data-binding-revise.component';
 import { AlertComponent } from './resuable/alert/alert.component';
 import { ProgressBarComponent } from './resuable/progress-bar/progress-bar.component';
+import { NgIfForComponent } from './components/revise/ng-if-for/ng-if-for.component';
+import { MyButtonComponent } from './resuable/my-button/my-button.component';
+import { TabsComponent } from './resuable/tabs/tabs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +62,10 @@ import { ProgressBarComponent } from './resuable/progress-bar/progress-bar.compo
     JsonPlaceHolderComponent,
     DataBindingReviseComponent,
     AlertComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    NgIfForComponent,
+    MyButtonComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

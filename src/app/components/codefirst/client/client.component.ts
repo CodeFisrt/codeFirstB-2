@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MasterService } from 'src/app/services/master.service';
 
 @Component({
   selector: 'app-client',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientComponent implements OnInit {
 
+  clinetTabs = ['Basic Details', 'Contact Details','Address'];
   alertText= "Clinet Page loaded Success";
   clientArray: any[] = [];
   clientObj: any = {
@@ -21,12 +23,19 @@ export class ClientComponent implements OnInit {
     "createdDate":  new Date(),
     "logo": ""
   };
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private master:MasterService) { }
 
   ngOnInit(): void {
     this.loadClinets();
+    this.loadCandidate();
   }
 
+  loadCandidate() {
+    debugger;
+    this.master.getAllCandidates().subscribe((res: any)=>{
+      debugger;
+    })
+  }
   loadClinets() {
     this.http.get('http://onlinetestapi.gerasim.in/api/GetValet/GetAllClients').subscribe((res: any) => {
       this.clientArray = res.data;
@@ -57,7 +66,7 @@ export class ClientComponent implements OnInit {
     })
   }
   onDelete(id: number) {
-    this.http.post('http://onlinetestapi.gerasim.in/api/GetValet/deleteClient?id='+id,'').subscribe((res:any)=> {
+   this.master.deleteClient(id).subscribe((res:any)=> {
       if(res.result) {
         alert("Client Deleted");
         this.loadClinets();

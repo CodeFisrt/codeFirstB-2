@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AlertComponent implements OnInit {
   @Input() spanText: string= '';
   @Input() mainText: string = '';
+  @Input() alertColor: string = '';
   constructor() { }
 
   ngOnInit(): void {

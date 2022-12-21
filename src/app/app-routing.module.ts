@@ -19,6 +19,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { DataBindingReviseComponent } from './components/revise/data-binding-revise/data-binding-revise.component';
+import { NgIfForComponent } from './components/revise/ng-if-for/ng-if-for.component';
 import { TemplateComponent } from './components/template/template.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { UserComponent } from './components/user/user.component';
@@ -112,6 +113,12 @@ const routes: Routes = [
     path:'DataBindig2',
     component: DataBindingReviseComponent
   }
+  ,
+  {
+    path:'ngIfFor',
+    component: NgIfForComponent
+  }
+
 ];
 
 @NgModule({

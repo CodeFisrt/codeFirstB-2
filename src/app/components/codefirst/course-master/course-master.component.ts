@@ -1,6 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MasterService } from 'src/app/services/master.service';
 
 @Component({
   selector: 'app-course-master',
@@ -16,7 +17,7 @@ export class CourseMasterComponent implements OnInit {
     "CourseDuration": "",
     "CourseBasicFees": ""
   };
-  constructor(private http: HttpClient) { } //create obuject of httpClinet
+  constructor(private http: HttpClient,private master: MasterService) { } //create obuject of httpClinet
 
   ngOnInit(): void {
     this.loadData(); //called function to load records
@@ -28,7 +29,8 @@ export class CourseMasterComponent implements OnInit {
     })
   }
   onSaveCourse() {
-    this.http.post('http://onlinetestapi.gerasim.in/api/OnlineTest/AddCourse',this.courseObject).subscribe((result: any)=>{
+    debugger;
+    this.master.saveCourse(this.courseObject).subscribe((result: any)=>{
       if(result.result) {
         this.loadData();
         alert(result.message);

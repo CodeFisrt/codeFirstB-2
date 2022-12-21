@@ -1,8 +1,25 @@
-<app-alert [spanText]="'Candidate page Loaded'" [mainText]="'Warning'">
+<app-alert [alertColor]="'alert-primary'" [spanText]="'Candidate page Loaded'" [mainText]="'Warning'">
 
 </app-alert>
 
 <app-progress-bar [progress]="30"></app-progress-bar>
+
+
+
+
+
+<app-my-button (onBtnClicked)="onMyBtnClicked()"
+ [btnText]="'Register'" [btnClass]="'btn-primary'" >
+</app-my-button>
+
+
+<div class="row">
+  <div class="col-5 pb-3">
+    <app-tabs [tabsArry]="candidateTabs"></app-tabs>
+  </div>
+</div>
+
+
 
 <div class="row">
     <div class="col-8">
@@ -29,8 +46,10 @@
                         <td>{{item.email}}</td>
                         <td>{{item.city}}</td>
                         <td>
-                            <button class="btn btn-success" (click)="OnEdit(item.candidateId)">Edit</button>
-                            <button class="btn btn-success" (click)="OnDelete(item)">Delete</button>
+                            <app-my-button (onBtnClicked)="OnEdit(item.candidateId)" [btnText]="'Edit'" [btnClass]="'btn-success'"></app-my-button>
+                            <!-- <button class="btn btn-success" (click)="OnEdit(item.candidateId)">Edit</button> -->
+                            <app-my-button (onBtnClicked)="OnDelete(item.candidateId)" [btnText]="'Edit'" [btnClass]="'btn-danger'"></app-my-button>
+                            <!-- <button class="btn btn-success" (click)="OnDelete(item)">Delete</button> -->
                         </td>
                     </tr>
                 </table>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MasterService } from 'src/app/services/master.service';
 
 @Component({
   selector: 'app-candidate',
@@ -7,17 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./candidate.component.css']
 })
 export class CandidateComponent implements OnInit {
-
+  candidateTabs = ['Registration', 'Invoice','Billing'];
   candidatesArray: any[] = [];
   candidateObj: any ;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+    private master : MasterService) {
     this.candidateObj = { }
   }
   ngOnInit(): void {
     this.getAllCandidates();
+    const year = this.master.getCurrentYear();
+    const name = this.master.apiName;
+    debugger;
   }
+
+
+
+
+  onMyBtnClicked() {
+    alert('child button clicked');
+  }
+
+
+
+
+
   getAllCandidates() {
-    this.http.get('http://onlinetestapi.gerasim.in/api/OnlineTest/GetAllCandidates').subscribe((result:any)=>{
+    debugger;
+    this.master.getAllCandidates().subscribe((result:any)=>{
+      debugger;
       this.candidatesArray = result.data;
     })
   }
