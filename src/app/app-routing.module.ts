@@ -11,6 +11,8 @@ import { CreateStudentComponent } from './components/create-student/create-stude
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { LoginComponent } from './components/login/login.component';
 import { NgClassComponent } from './components/ng-class/ng-class.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
@@ -26,99 +28,113 @@ import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   {
+    path:'',
+    component:LoginComponent
+  },
+  {
+    path:'',
+    component:LayoutComponent,
+    children:[
+      {
+        path: 'emp',
+        component: EmployeeComponent
+      },
+      {
+        path: 'user',
+        component: UserComponent
+      },
+       {
+        path:'Data-Binding',
+        component: DataBindingComponent
+      },
+      {
+        path:'calculator',
+        component: CalculatorComponent
+      },
+      {
+        path:'createStudent',
+        component: CreateStudentComponent
+      },
+      {
+        path:'ng-if',
+        component: NgifComponent
+      },
+      {
+        path:'ng-for',
+        component: NgForComponent
+      },
+      {
+        path:'ng-class',
+        component: NgClassComponent
+      },
+      {
+        path:'ng-style',
+        component: NgStyleComponent
+      },
+      {
+        path:'pipe',
+        component: PipesComponent
+      },
+      {
+        path:'users',
+        component: UserRegistrationComponent
+      },
+      {
+        path:'create-Product',
+        component: CreateProductComponent
+      },
+      {
+        path:'product-List',
+        component: ProductListComponent
+      },
+      {
+        path:'emp-List',
+        component: EmployeeListComponent
+      },
+      {
+        path:'template',
+        component: TemplateComponent
+      },
+      {
+        path:'get-api',
+        component: ApiGetComponent
+      },
+      {
+        path:'Course',
+        component: CourseMasterComponent
+      },
+      {
+        path:'enquiry',
+        component: EnquiryComponent
+      },
+      {
+        path:'candidate',
+        component: CandidateComponent
+      },
+      {
+        path:'client',
+        component: ClientComponent
+      },
+      {
+        path:'json',
+        component: JsonPlaceHolderComponent
+      },
+      {
+        path:'DataBindig2',
+        component: DataBindingReviseComponent
+      }
+      ,
+      {
+        path:'ngIfFor',
+        component: NgIfForComponent
+      }
+
+    ]
+  },
+  {
     path: 'emp',
     component: EmployeeComponent
-  },
-  {
-    path: 'user',
-    component: UserComponent
-  },
-   {
-    path:'Data-Binding',
-    component: DataBindingComponent
-  },
-  {
-    path:'calculator',
-    component: CalculatorComponent
-  },
-  {
-    path:'createStudent',
-    component: CreateStudentComponent
-  },
-  {
-    path:'ng-if',
-    component: NgifComponent
-  },
-  {
-    path:'ng-for',
-    component: NgForComponent
-  },
-  {
-    path:'ng-class',
-    component: NgClassComponent
-  },
-  {
-    path:'ng-style',
-    component: NgStyleComponent
-  },
-  {
-    path:'pipe',
-    component: PipesComponent
-  },
-  {
-    path:'users',
-    component: UserRegistrationComponent
-  },
-  {
-    path:'create-Product',
-    component: CreateProductComponent
-  },
-  {
-    path:'product-List',
-    component: ProductListComponent
-  },
-  {
-    path:'emp-List',
-    component: EmployeeListComponent
-  },
-  {
-    path:'template',
-    component: TemplateComponent
-  },
-  {
-    path:'get-api',
-    component: ApiGetComponent
-  },
-  {
-    path:'Course',
-    component: CourseMasterComponent
-  },
-  {
-    path:'enquiry',
-    component: EnquiryComponent
-  },
-  {
-    path:'candidate',
-    component: CandidateComponent
-  },
-  {
-    path:'client',
-    component: ClientComponent
-  },
-  {
-    path:'json',
-    component: JsonPlaceHolderComponent
-  },
-  {
-    path:'DataBindig2',
-    component: DataBindingReviseComponent
   }
-  ,
-  {
-    path:'ngIfFor',
-    component: NgIfForComponent
-  }
-
 ];
 
 @NgModule({
