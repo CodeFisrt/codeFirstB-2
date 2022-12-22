@@ -24,4 +24,11 @@ export class MasterService {
   deleteClient(id: number): Observable<any> {
     return this.http.post("http://onlinetestapi.gerasim.in/api/GetValet/deleteClient?id="+ id,'');
   }
+
+  getUser() :Observable<any> {
+   return this.http.get(' https://gorest.co.in/public/v2/users');
+  }
+  createUser(obj: any)  :Observable<any> {
+    return this.http.post(' https://gorest.co.in/public/v2/users',obj);
+  }
 }
