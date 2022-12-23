@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Emp } from 'src/app/classes/emp';
 
 @Component({
   selector: 'app-employee-list',
@@ -8,16 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeListComponent implements OnInit {
 
   isSidePanelOpen: boolean = true;
-  employeeArray: any [] = [];
-  employeeObject: any = {
-    empName: '',
-    empId: '',
-    address: '',
-    city: '',
-    contact:'',
-    dept:''
+  employeeArray: Emp [] = [];
+  employeeObject: Emp;//1st step
+  studentObj : any = {
+    studId:1,
+    name:'',
+    address:''
   };
   constructor() {
+    this.employeeObject = new Emp(); //2nd step
     const localData = localStorage.getItem('empArr');
     if(localData!= null) {
       this.employeeArray = JSON.parse(localData);
@@ -27,14 +27,7 @@ export class EmployeeListComponent implements OnInit {
   }
   showSidePanel() {
     this.isSidePanelOpen = true;
-    this.employeeObject = {
-      empName: '',
-      empId: '',
-      address: '',
-      city: '',
-      contact:'',
-      dept:''
-    };
+
   }
   closeSidePanel() {
     this.isSidePanelOpen = false;
@@ -42,14 +35,7 @@ export class EmployeeListComponent implements OnInit {
   onSaveEmp() {
     this.employeeArray.push(this.employeeObject);
     alert('Employee Saved');
-    this.employeeObject = {
-      empName: '',
-      empId: '',
-      address: '',
-      city: '',
-      contact:'',
-      dept:''
-    };
+
     localStorage.setItem('empArr',JSON.stringify(this.employeeArray));
   }
 

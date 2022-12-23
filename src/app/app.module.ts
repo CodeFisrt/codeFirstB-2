@@ -38,6 +38,7 @@ import { UserTaskComponent } from './components/user-task/user-task.component';
 import { HttpInterceptors } from './services/http.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AuthGuard } from './services/guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpInterceptors],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

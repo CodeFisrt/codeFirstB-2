@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
   }
   onLogin() {
     if(this.loginObj.username == "admin" && this.loginObj.password == "admin@123") {
-      this.router.navigateByUrl("calculator")
+      localStorage.setItem('username',
+      this.loginObj.username);
+      this.router.navigateByUrl("calculator");
     } else {
       alert("wrong credentials")
     }

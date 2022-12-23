@@ -25,6 +25,7 @@ import { NgIfForComponent } from './components/revise/ng-if-for/ng-if-for.compon
 import { TemplateComponent } from './components/template/template.component';
 import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 import { UserComponent } from './components/user/user.component';
+import { AuthGuard } from './services/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -32,12 +33,17 @@ const routes: Routes = [
     component:LoginComponent
   },
   {
+    path:'login',
+    component:LoginComponent
+  },
+  {
     path:'',
-    component:LayoutComponent,
+    component:LayoutComponent,//ha comma dya
     children:[
       {
         path: 'emp',
-        component: EmployeeComponent
+        component: EmployeeComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'user',
@@ -45,7 +51,8 @@ const routes: Routes = [
       },
        {
         path:'Data-Binding',
-        component: DataBindingComponent
+        component: DataBindingComponent,
+        canActivate: [AuthGuard]
       },
       {
         path:'calculator',
