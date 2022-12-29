@@ -20,6 +20,7 @@ import { NgifComponent } from './components/ngif/ngif.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { CreateProductComponent } from './components/product/create-product/create-product.component';
 import { ProductListComponent } from './components/product/product-list/product-list.component';
+import { ReactiveFromComponent } from './components/reactive-from/reactive-from.component';
 import { DataBindingReviseComponent } from './components/revise/data-binding-revise/data-binding-revise.component';
 import { NgIfForComponent } from './components/revise/ng-if-for/ng-if-for.component';
 import { TemplateComponent } from './components/template/template.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
       {
         path: 'user',
         component: UserComponent
+      },
+      {
+        path: 'reactive',
+        component: ReactiveFromComponent
       },
        {
         path:'Data-Binding',

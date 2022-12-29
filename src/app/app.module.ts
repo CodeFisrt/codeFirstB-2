@@ -7,7 +7,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { UserComponent } from './components/user/user.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateStudentComponent } from './components/create-student/create-student.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { NgForComponent } from './components/ng-for/ng-for.component';
@@ -39,6 +39,7 @@ import { HttpInterceptors } from './services/http.interceptor';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AuthGuard } from './services/guards/auth.guard';
+import { ReactiveFromComponent } from './components/reactive-from/reactive-from.component';
 
 @NgModule({
   declarations: [
@@ -74,13 +75,15 @@ import { AuthGuard } from './services/guards/auth.guard';
     TabsComponent,
     UserTaskComponent,
     LoginComponent,
-    LayoutComponent
+    LayoutComponent,
+    ReactiveFromComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
